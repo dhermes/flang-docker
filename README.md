@@ -13,6 +13,6 @@ will [pin][2] to a specific commit in the Docker file.
 
 - `01`: Just basic Ubuntu dependencies (Completed)
 - `02`: Build and install `llvm` (Completed)
-- `03`: Build and install a `clang` modified for `flang`
-- `04`: Build and install `openmp-llvm`
-- `05`: Build and install `flang`
+- `03`: Build and install a `clang` modified for `flang` (Completed)
+- `04`: Build and install `openmp-llvm` (Completed)
+- `05`: Build and install `flang` (Completed)
