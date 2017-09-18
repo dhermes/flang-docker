@@ -25,7 +25,7 @@ RUN git clone https://github.com/llvm-mirror/llvm.git \
   && mkdir build && cd build \
   && cmake .. \
   && make --jobs $(nproc) \
-  && sudo make install
+  && make install
 
 # Clone the ``clang`` modified by ``flang`` and build
 RUN git clone https://github.com/flang-compiler/clang.git \
@@ -34,7 +34,7 @@ RUN git clone https://github.com/flang-compiler/clang.git \
   && mkdir build && cd build \
   && cmake .. \
   && make --jobs $(nproc) \
-  && sudo make install
+  && make install
 
 # Clone ``openmp-llvm`` and build
 RUN git clone https://github.com/llvm-mirror/openmp.git \
@@ -43,7 +43,7 @@ RUN git clone https://github.com/llvm-mirror/openmp.git \
   && mkdir build && cd build \
   && cmake .. \
   && make --jobs $(nproc) \
-  && sudo make install
+  && make install
 
 # Clone ``flang`` and build
 RUN git clone https://github.com/flang-compiler/flang.git \
@@ -52,4 +52,4 @@ RUN git clone https://github.com/flang-compiler/flang.git \
   && mkdir build && cd build \
   && cmake -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_C_COMPILER=clang -DCMAKE_Fortran_COMPILER=flang .. \
   && make --jobs $(nproc) \
-  && sudo make install
+  && make install

@@ -5,5 +5,5 @@ RUN cd llvm \
   && git checkout release_40 \
   && mkdir build && cd build \
   && cmake .. \
-  && make --jobs $(nproc) \
-  && sudo make install
+  && make --jobs $(($(nproc) > 1 ? $(expr $(nproc) / 2) : 1)) \
+  && make install

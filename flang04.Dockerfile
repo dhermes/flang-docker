@@ -6,4 +6,4 @@ RUN cd openmp/runtime \
   && mkdir build && cd build \
   && cmake .. \
   && make --jobs $(nproc) \
-  && sudo make install
+  && make install
